@@ -1,1 +1,1 @@
-web: java -Dserver.port=$PORT -jar target/spring_demo_heroku-0.0.1-SNAPSHOT.jar
+web: java -Dserver.port=$PORT -jar target/puppy-0.0.1-SNAPSHOT.jar
