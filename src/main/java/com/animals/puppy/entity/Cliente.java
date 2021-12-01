@@ -37,4 +37,5 @@ public class Cliente {
     public void setCreadoEl(Timestamp creadoEl) {
         this.creadoEl = creadoEl;
     }
+
 }
