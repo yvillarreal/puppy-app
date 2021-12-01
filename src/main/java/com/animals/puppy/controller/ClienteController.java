@@ -20,7 +20,7 @@ public class ClienteController {
     public String cargarTodos(Model model){
         List<Cliente> clienteList = clienteRepository.findAll();
         model.addAttribute("listClientes", clienteList);
-        return "clientes";
+        return String.valueOf(clienteRepository.findAll());
 
     }
 }
