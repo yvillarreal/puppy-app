@@ -1,23 +1,25 @@
 package com.animals.puppy.entity;
 
-import org.apache.logging.log4j.message.TimestampMessage;
-import org.springframework.stereotype.Repository;
-
+import javax.persistence.*;
 import java.sql.Timestamp;
 
-@Repository
-
+@Entity
+@Table(name = "cliente")
 public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     private String nombre;
     private Timestamp creadoEl;
 
-    public Timestamp getCreadoEl() {
-        return creadoEl;
+    public Integer getId() {
+        return id;
     }
 
-    public void setCreadoEl(Timestamp creadoEl) {
-        this.creadoEl = creadoEl;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -26,5 +28,13 @@ public class Cliente {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Timestamp getCreadoEl() {
+        return creadoEl;
+    }
+
+    public void setCreadoEl(Timestamp creadoEl) {
+        this.creadoEl = creadoEl;
     }
 }
