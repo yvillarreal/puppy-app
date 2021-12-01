@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class IndexController {
     @GetMapping("/")
     public String index() {
-        return "Hola mundo.";
+        HelloWord n = new HelloWord();
+        return "Hello " + n.getFirstName() + n.getLastName();
     }
 }
